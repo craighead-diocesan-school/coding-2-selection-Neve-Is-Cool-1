@@ -1,19 +1,18 @@
 <script>
   import Header from "$lib/Header.svelte"
-  import BulmaExamples from "$lib/BulmaExamples.svelte"
+  import UserRole from "$lib/UserRole.svelte"
+  let name = "Alice"
 </script>
 
 <Header />
 
 <main class="content section">
-  <h2>SvelteKit</h2>
-
-  <p>Welcome to coding with SvelteKit, a modern JavaScript framework that makes it easy to code great apps.</p>
-
-  <p>This template comes loaded with the <a href="https://bulma.io/documentation/">Bulma CSS framework</a>, so you can save time and focus on your project.</p>
-
-  <p>Here's some examples of colour helpers. You can change the colours in <code>theme.scss</code></p>
-  <BulmaExamples />
+  {#if name == "Alice"}
+    <h1>Welcome back, Alice!</h1>
+  {:else}
+    <h1>Hello, {name}!</h1>
+  {/if}
+  <UserRole />
 </main>
 
 <footer class="footer">
