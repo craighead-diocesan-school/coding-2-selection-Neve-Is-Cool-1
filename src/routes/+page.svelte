@@ -9,6 +9,8 @@
 <main class="content section">
   {#if name == "Alice"}
     <h1>Welcome back, Alice!</h1>
+  {:else if name == "Bob"}
+    <h1>Not you again!</h1>
   {:else}
     <h1>Hello, {name}!</h1>
   {/if}
