@@ -7,14 +7,19 @@
 <Header />
 
 <main class="content section">
-  {#if name == "Alice"}
-    <h1>Welcome back, Alice!</h1>
-  {:else if name == "Bob"}
-    <h1>Not you again!</h1>
-  {:else}
-    <h1>Hello, {name}!</h1>
-  {/if}
-  <UserRole />
+  <div class="box">
+    <input bind:value={name} placeholder="Enter your name" />
+    {#if name == "Alice"}
+      <h1>Welcome back, Alice!</h1>
+    {:else if name == "Bob"}
+      <h1>Not you again!</h1>
+    {:else}
+      <h1>Hello, {name}!</h1>
+    {/if}
+  </div>
+  <div class="box">
+    <UserRole />
+  </div>
 </main>
 
 <footer class="footer">
